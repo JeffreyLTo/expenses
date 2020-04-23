@@ -1,24 +1,22 @@
-import React from 'react';
-import { Header } from './components/Header'
-import { Money } from './components/Money'
-import { Expenses } from './components/Expenses'
-import { AddExpense } from './components/AddExpense'
-
-
+import React, { Component } from 'react';
+import Navbar from './Navbar.js'
+import Budget from './budget/Budget.js'
 import './App.css';
 
 
-function App() {
-  return (
-    <div>
-      {/* Render the Header component*/}
-      <Header />
-      <Money />
-      <Expenses />
-      <AddExpense />
-      
+
+class App extends Component{
+  render() {
+    return (
+    <div className = "App">
+      <Navbar />
+      <div className='container my-5'>
+        <Budget />
+
+      </div>
     </div>
   );
+    }
 }
 
 export default App;
