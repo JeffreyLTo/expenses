@@ -6,12 +6,12 @@ import DisplayBudget from '../display/DisplayBudget';
 const Budget = () => {
     return (
         <div className="row">
-            <div classname="col-lg-4">
+            <div className="col-lg-4">
                 <InputBudget />
                 <InputExpense />
             </div>
 
-            <div classname="col-lg-8">
+            <div className="col-lg-8">
                 <DisplayBudget />
             </div>
         </div>

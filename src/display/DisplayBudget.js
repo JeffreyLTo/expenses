@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import BalanceDisplay from './BalanceDisplay'
 
 const DisplayBudget = () => {
     return(
         <div className="card card-body">
             <h3 className= "text-center">Your Budget Info</h3>
-            <h2>Balance Display</h2>
+            <BalanceDisplay />
+            <h2>Expenses List</h2>
 
         </div>
     )
