@@ -5,7 +5,7 @@ import { GlobalProvider } from './States/GlobalState'
 import './App.css';
 
 
-
+// What will be rendered when App is called.
 class App extends Component{
   render() {
     return (
