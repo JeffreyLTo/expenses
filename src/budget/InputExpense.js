@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { BudgetConsumer } from '../Values'
 
 class InputExpense extends Component {
     render() {
         return(
-            <div className="card card-body">
+            <div className="card h-100 card-body">
                 <form>
                     <label>Expense</label>
                     <input className="form-control" name="Name of Expense"></input>

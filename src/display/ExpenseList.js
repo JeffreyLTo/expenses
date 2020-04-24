@@ -16,9 +16,9 @@ class ExpenseList extends Component {
                     <BudgetConsumer>
                         {value => {
                             const expensesList = value.expenses.length > 0? (
-                                value.expenses.map(expenses => {
+                                value.expenses.map((expenses, index) => {
                                     return (
-                                         <tr>
+                                         <tr key={index}>
                                             <td>{expenses.name}</td>
                                             <td>{expenses.cost}</td>
                                             <td>{expenses.type}</td>

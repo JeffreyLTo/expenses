@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 
 const BudgetContext = React.createContext();
 
+
 class BudgetProvider extends Component {
 
     state = {
-        budget: 102,
         expenses: [
         {name: 'fun', cost: 500, type: 'test'},
         {name: 'fun', cost: 500, type: 'test'},
         {name: 'fun', cost: 500, type: 'test'},
         {name: 'fun', cost: 500, type: 'test'},
         ]
+
     }
 
     render() {
