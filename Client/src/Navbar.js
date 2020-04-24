@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+// Quick navbar for front end, just to add some more color to application
 class Navbar extends Component {
     render() {
         return(

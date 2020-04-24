@@ -2,9 +2,7 @@ import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../States/GlobalState'
 
 
-
-
-
+// Define what will be rendered by React when InputExpense is called
 export const InputExpense = () => {
 
     // Create variable to hold global access to state
@@ -16,6 +14,7 @@ export const InputExpense = () => {
         const [type, setType] = useState('');
     
 
+    // Function to handle event from form submit 
     const onSubmit = (e) => {
         e.preventDefault()
 
@@ -31,7 +30,7 @@ export const InputExpense = () => {
         addExpense(newExpense);
         
     }
-
+        // Return a bootstrap card containing a form for user to enter a new expense
         return(
             <div className="card h-100 card-body">
                 <form onSubmit={onSubmit}>
