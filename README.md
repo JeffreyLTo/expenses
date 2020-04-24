@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is an expense tracker app made using MongoDB, Express, React, Node.js.
+This is an expense tracker app made using MongoDB Atlus, Express, React, Node.js.
+
+Database set up through MongoDB Atlus, no log in should be required
 
 Users can fill in information about an expense and post. The expense will be added to the list and a running cost total will be displayed. Users can also delete expenses and have it be updated.
 
