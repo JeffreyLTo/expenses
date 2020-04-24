@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
-import { BudgetConsumer } from '../Values'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../States/GlobalState'
 
-class ExpenseList extends Component {
-    render() {
+
+export const ExpenseList = () =>  {
+
+    const {expenses} = useContext(GlobalContext);
+    const {deleteExpense} = useContext(GlobalContext);
+
+
         return(
             <div className="card mt-5">
                 <table className="table-bordered">
@@ -13,31 +18,20 @@ class ExpenseList extends Component {
                             <th>Type</th>
                         </tr>
                     </thead>
-                    <BudgetConsumer>
-                        {value => {
-                            const expensesList = value.expenses.length > 0? (
-                                value.expenses.map((expenses, index) => {
-                                    return (
-                                         <tr key={index}>
-                                            <td>{expenses.name}</td>
-                                            <td>{expenses.cost}</td>
-                                            <td>{expenses.type}</td>
-                                        </tr>
-                                    )
-                                })
-                            ) : (
-                                <tr>
-                                    <td>Your Expenses Will Appear Here</td>
-                                </tr>
-                            )
-                            return <tbody>{expensesList}</tbody>
-                        }}
-                    </BudgetConsumer>
+                    <tbody>
+                        {expenses.map(expense => (
+                            <tr>
+                                <td><button className="del btn.sm btn-danger" onClick={() => deleteExpense(expense.id)}>x</button>{expense.name}</td>
+                                <td>{expense.cost}</td>
+                                <td>{expense.type}</td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
 
             </div>
         )
-    }
+    
 }
 
 export default ExpenseList
